@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="_1mxblack.Resources.Admin.AddRent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:_1mxblack"
+        mc:Ignorable="d"
+        Height="auto" Width="auto">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Indigo.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.amber.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.DatePicker.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid x:Name="GridRent" Width="auto">
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromTop, Duration=0:0:0.8}">
+            <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20" Height="450" HorizontalAlignment="Center">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="30" Color="gray" ShadowDepth="0"></DropShadowEffect>
+                </Border.Effect>
+                <StackPanel Margin="10">
+                    <TextBlock Text="Аренда" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Margin="0 0 0 20"/>
+                    <StackPanel>
+                        <TextBox x:Name="Car_id_TextBox"  materialDesign:HintAssist.Hint="Введите номер автомобиля" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="2" />
+                        <TextBox x:Name="Client_id_TextBox"  materialDesign:HintAssist.Hint="Введите номер клиента" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="2" />
+                    </StackPanel>
+                    <StackPanel>
+                        <DatePicker x:Name="Date_start" HorizontalAlignment="Left" Width="340" Margin="10" VerticalAlignment="Top" materialDesign:HintAssist.Hint="Начальная дата" Style="{StaticResource MaterialDesignFloatingHintDatePicker}"/>
+                        <DatePicker x:Name="Date_end" HorizontalAlignment="Left" Width="340" Margin="10"  VerticalAlignment="Top" materialDesign:HintAssist.Hint="Конечная дата" Style="{StaticResource MaterialDesignFloatingHintDatePicker}"/>
+                    </StackPanel>
+                    <StackPanel>
+                        <Button x:Name="RegistrationButton" Content="Зарегистрировать" Margin="10"  Click="RegistrationButton_Click"/>
+                        <Button x:Name="ExitButton"  Content="Назад"  Margin="10"  Click="ExitButton_Click" Style="{StaticResource MaterialDesignFlatAccentButton}"  Foreground="Black" FontSize="12"  />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</UserControl>

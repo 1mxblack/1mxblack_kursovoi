@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="_1mxblack.AddCar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:_1mxblack"
+             mc:Ignorable="d">
+    <Grid x:Name="GridAddCar" >
+        <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20" Height="450" HorizontalAlignment="Center">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="gray" ShadowDepth="0"></DropShadowEffect>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Car"/>
+                <TextBox x:Name="Model_TextBox" materialDesign:HintAssist.Hint="Введите модель" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox x:Name="Color_TextBox" materialDesign:HintAssist.Hint="Введите цвет" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox x:Name="Year_release_TextBox" materialDesign:HintAssist.Hint="Введите год производства" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox x:Name="Price_day_TextBox" materialDesign:HintAssist.Hint="Введите цену за день" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox x:Name="Mileage_TextBox" materialDesign:HintAssist.Hint="Введите пробег " Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox x:Name="Type_car_TextBox" materialDesign:HintAssist.Hint="Введите тип " Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <Button x:Name="RegistrationButton" Content="Добавить"  Click="RegistrationButton_Click" Margin="10"/>
+                <Button  Content="Назад" Click="Button_Click" Margin="10"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

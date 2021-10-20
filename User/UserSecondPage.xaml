@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="_1mxblack.UserSecondPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:_1mxblack"
+             mc:Ignorable="d">
+    <Grid x:Name="GridPersonalPage" >
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight, Duration=0:0:0.8}">
+            <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20" Height="450" HorizontalAlignment="Left">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="gray" ShadowDepth="0"></DropShadowEffect>
+            </Border.Effect>
+            <StackPanel VerticalAlignment="Center" >
+                <TextBlock Text="Персональный аккаунт" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Margin="0 0 0 20"/>
+                <StackPanel VerticalAlignment="Center">
+                    <Button  Margin="20" Click="Button_Edit_User">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Edit" Margin="-70 2 0 0" Width="30" />
+                            <TextBlock Text="Редактировать профиль"/>
+                        </StackPanel>
+                    </Button>
+                    <Button  Margin="20" Click="Button_MyCar_User">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="CarCog" Margin="-105 2 0 0" Width="30" />
+                            <TextBlock Text="Мои машины"/>
+                        </StackPanel>
+                    </Button>
+                        <Button Margin="20" Click="Button_Exit_Click" Style="{StaticResource MaterialDesignFlatAccentButton}" >
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="SignOutVariant" Margin="-90 2 0 0" Width="30" />
+                            <TextBlock Text="Выход из профиля"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+        </materialDesign:TransitioningContent >
+    </Grid>
+</UserControl>

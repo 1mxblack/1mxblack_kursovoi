@@ -1,0 +1,29 @@
+﻿<Page x:Class="_1mxblack.AuthUserPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:_1mxblack"
+        mc:Ignorable = "d" Height = "auto" Width="auto" >
+    <Grid VerticalAlignment="Center" >
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromleft, Duration=0:0:0.8}">
+            <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20" >
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="30" Color="Gray" ShadowDepth="0"></DropShadowEffect>
+                </Border.Effect>
+                <StackPanel>
+                    <TextBlock Text="Aвторизация" Margin="0 0 0 20" FontSize="30" FontWeight="Light" FontStretch="UltraCondensed" FontStyle="Italic" HorizontalAlignment="Center" />
+                    <Grid Margin="0 0 0 20">
+                        <Button HorizontalAlignment="Right" Content="Регистрация" Style="{StaticResource MaterialDesignFlatAccentButton}" Height="32" Click="Button_WinReg_Click" VerticalAlignment="Bottom" Margin="0,0,376.4,0" />
+                        <Button HorizontalAlignment="Right" Content="Войти" />
+                    </Grid>
+                    <TextBox x:Name="tblogin" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <PasswordBox x:Name="bpass" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
+                    <Button x:Name="authbutton" Content="Войти " Margin="15" Style="{StaticResource MaterialDesignFlatMidBgButton}" Click="Button_Auth_Click" FontStretch="Expanded" FontStyle="Italic" FontWeight="Normal" TextOptions.TextHintingMode="Fixed" TextOptions.TextFormattingMode="Display"  />
+                    <Button HorizontalAlignment="Center" Content="Назад" Margin="5" Style="{StaticResource MaterialDesignFlatAccentButton}" Click="Exit_Click" Foreground="Black" FontSize="12" />
+                </StackPanel>
+            </Border>
+        </materialDesign:TransitioningContent>
+    </Grid>
+    </Page>
